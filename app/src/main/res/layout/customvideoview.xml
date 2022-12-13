@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/profile"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profiles"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thumbnail" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/channelName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="12sp"
+            android:textAlignment="textStart"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/separator1"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/channelName"
+            app:layout_constraintStart_toEndOf="@+id/channelName"
+            app:layout_constraintTop_toTopOf="@+id/channelName"
+            app:srcCompat="@drawable/text_dot_separator" />
+
+        <TextView
+            android:id="@+id/views"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textSize="12sp"
+            android:text="0 views"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@+id/channelName"
+            app:layout_constraintStart_toEndOf="@id/separator1"
+            app:layout_constraintTop_toTopOf="@+id/channelName"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/separator2"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/views"
+            app:layout_constraintStart_toEndOf="@id/views"
+            app:layout_constraintTop_toTopOf="@+id/views"
+            app:srcCompat="@drawable/text_dot_separator" />
+
+        <TextView
+            android:id="@+id/publishedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="6dp"
+            android:textSize="12sp"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@+id/views"
+            app:layout_constraintStart_toEndOf="@+id/separator2"
+            app:layout_constraintTop_toTopOf="@+id/views"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView"
+            app:srcCompat="@drawable/actions_icons" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    -->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        style="?attr/materialCardViewFilledStyle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/thumbnail"-->
+<!--                style="@style/ShapeAppearanceOverlay.App.Card.Media"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:background="@drawable/roundcorners"-->
+<!--                android:clipToOutline="true"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearLayout2"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/thumbnail">-->
+
+<!--                <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    android:id="@+id/circleImageView"-->
+<!--                    android:layout_width="38dp"-->
+<!--                    android:layout_height="38dp"-->
+<!--                    android:layout_marginStart="14dp"-->
+<!--                    android:layout_marginBottom="4dp"-->
+<!--                    android:scaleType="centerCrop"-->
+<!--                    android:src="@drawable/profiles"-->
+<!--                    app:civ_border_width="1dp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/exo_progress"-->
+<!--                    app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="18dp"-->
+<!--                    android:orientation="vertical">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/title"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginBottom="4dp"-->
+<!--                        android:gravity="start"-->
+<!--                        android:text="@string/title"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toTopOf="@+id/exo_progress"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/circleImageView" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/channelName"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/app_name"-->
+<!--                        android:textSize="10sp" />-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
